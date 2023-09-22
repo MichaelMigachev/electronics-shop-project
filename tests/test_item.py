@@ -27,3 +27,12 @@ def test_Item_string_to_number():
     assert Item.string_to_number("8") == 8
     assert Item.string_to_number("88.8") == 88
 
+def test_repr():
+    """Тест для магических методов  __repr__ и __str__"""
+    item1 = Item("Пылесос", 4500, 88)
+    item2 = Item('Утюг', 3800, 45)
+    assert repr(item1) == "Item('Пылесос', 4500, 88)"
+    assert repr(item2) == "Item('Утюг', 3800, 45)"
+    assert str(item1) == 'Пылесос'
+    assert str(item2) == 'Утюг'
+
