@@ -36,3 +36,5 @@ def test_repr():
     assert str(item1) == 'Пылесос'
     assert str(item2) == 'Утюг'
 
+
+

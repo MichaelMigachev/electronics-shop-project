@@ -28,6 +28,13 @@ class Item:
         '''Магический метод __str__'''
         return f'{self.__name}'
 
+    def __add__(self, other):
+        '''проверка принадлежности к классам Item, Phone и сложение экземпляров класса'''
+        if issubclass(other.__class__, self.__class__):
+            total_sum = self.quantity + other.quantity
+            return total_sum
+        return f"Нельзя складывать объекты разных классов"
+
     def calculate_total_price(self) -> float:
         """
         Рассчитывает общую стоимость конкретного товара в магазине.
